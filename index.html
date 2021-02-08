@@ -26,7 +26,7 @@
                 <form>
                     <div class="mb-3">
                         <label class="form-label">Nombre y Apellido</label>
-                        <input type="text" class="form-control" id='nombre' placeholder="Juan Perez" onblur="campoRequerido()">
+                        <input type="text" class="form-control" id='nombre' placeholder="Juan Perez" onblur="campoRequerido(this)">
                         <div class="invalid-feedback">
                            Debe ingresar un nombre y apellido valido
                         </div>
@@ -36,21 +36,21 @@
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Email</label>
-                        <input type="email" class="form-control" id='email' placeholder="juanperez@gmail.com">
+                        <input type="email" class="form-control" id='email' placeholder="juanperez@gmail.com" onblur="validarEmail(this)">
                         <div class="invalid-feedback">
                            Debe ingresar un mail valido
                         </div>
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Telefono</label>
-                        <input type="number" class="form-control" id='telefono' placeholder="3816555444">
+                        <input type="number" class="form-control" id='telefono' placeholder="3816555444" onblur="validarNumeros(this)">
                         <div class="invalid-feedback">
                            Debe ingresar un numero de telefono
                         </div>
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Consulta</label>
-                        <textarea id="consulta" class="form-control" placeholder='Ingrese su consulta'></textarea>
+                        <textarea id="consulta" class="form-control" placeholder='Ingrese su consulta' onblur="validarConsulta(this)"></textarea>
                         <div class="invalid-feedback">
                            Debe ingresar una consulta de almenos 10 caracteres
                         </div>
